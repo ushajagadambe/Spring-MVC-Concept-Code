@@ -1,0 +1,5 @@
+use springbootcurd;
+select * from hospital;
+id      name   location
+1	Horizn	Pune
+		
