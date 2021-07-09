@@ -32,8 +32,6 @@ public class ExportPDF {
 
     private  void writeTableHeader(PdfPTable table) {
         PdfPCell cell = new PdfPCell();
-        FontFactory.register("Font/Mangal Regular.ttf");
-        Font hindiFont = FontFactory.getFont("Mangal", BaseFont.IDENTITY_H, true);
         cell.setPadding(5);
 
         Font font = FontFactory.getFont(FontFactory.HELVETICA);
@@ -48,8 +46,7 @@ public class ExportPDF {
 
         cell.setPhrase(new Phrase("location", font));
         table.addCell(cell);
-        cell.setPhrase(new Phrase("hindi_Name", hindiFont));
-        table.addCell(cell);
+
 
     }
 
@@ -71,9 +68,9 @@ public class ExportPDF {
                 "हिंदी समर्थन",hindiFont);
         p.setAlignment(Paragraph.ALIGN_CENTER);
         document.add(p);
-        PdfPTable table = new PdfPTable(4);
+        PdfPTable table = new PdfPTable(3);
         table.setWidthPercentage(100f);
-        table.setWidths(new float[] {1.5f, 3.5f, 3.0f,3.0f});
+        table.setWidths(new float[] {1.5f, 3.5f, 3.0f});
         table.setSpacingBefore(10);
 
         writeTableHeader(table);
