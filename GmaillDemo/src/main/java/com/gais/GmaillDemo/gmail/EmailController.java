@@ -18,8 +18,8 @@ import javax.mail.internet.*;
 public class EmailController {
     @GetMapping("/sendMail/{receiver}")
     public ResponseEntity<String> getAllAvailableTimingsForBatch(@PathVariable(name="receiver") String receiver) {
-        String sender="ushajagadambe@gmail.com";
-        String password="Usha@1998";
+        String sender="abc@gmail.com";
+        String password="xyz";
         Properties properties=new Properties();
         properties.put("mail.smtp.host","smtp.gmail.com");
         properties.put("mail.smtp.port","587");
