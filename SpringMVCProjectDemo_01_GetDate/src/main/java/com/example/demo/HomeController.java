@@ -17,8 +17,6 @@ public class HomeController {
 		@GetMapping("/")
 		public String getHomePgae()
 		{
-		
-			System.out.print(config.getClass());
 			return "home";
 		}
      @GetMapping("/getDate")
